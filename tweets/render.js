@@ -1,14 +1,18 @@
-const render = (state) => {
-    const tweetsDOM = document.getElementById('tweetsContainer');
+const render = state => {
+  const tweetsDOM = document.getElementById('tweetsContainer')
 
-    const tweetsHTML = state.map(function (tweet) {
-        return `
+  const tweetsHTML = state.map(function (tweet) {
+    return `
             <div class="bg-white p-2 m-2 w-50">
                 <div class="d-flex align-items-center">
                     <img width="50" src="${tweet.user.profilePic}" />
                     <div class="mt-4 ml-2">
                         <b>${tweet.user.username}</b>
-                        ${tweet.user.isVerified ? '<img width="15" src="twitterIcons/check-circle.svg" />' : ''}
+                        ${
+                          tweet.user.isVerified
+                            ? '<img width="15" src="twitterIcons/check-circle.svg" />'
+                            : ''
+                        }
                         <p>${tweet.user.handle}</p>
                         
                     </div>
@@ -25,11 +29,11 @@ const render = (state) => {
                 </div>
             </div>
         `
-    });
+  })
 
-    tweetsDOM.innerHTML = `
+  tweetsDOM.innerHTML = `
         <div class="d-flex flex-column justify-content-start align-items-center mt-5">
             ${tweetsHTML.join('')}
         </div>
     `
-}
+};
