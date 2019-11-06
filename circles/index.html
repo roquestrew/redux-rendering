@@ -5,18 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
 <body>
-    <div id="circlesContainer">
 
+  <section id="circlesContainer">
+    <div class="d-flex flex-column align-items-center">
+      <div style="width: 100px; height: 100px; border-radius: 50px; background-color: #FF00FF;"></div>
+      <div style="width: 60px; height: 60px; border-radius: 30px; background-color: #FF99AA;"></div>
+      <div style="width: 120px; height: 120px; border-radius: 60px; background-color: #0000FF;"></div>
+      <div style="width: 20px; height: 20px; border-radius: 10px; background-color: #000000;"></div>
     </div>
-    <button id="addCircle">Add random circle</button>
+  </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.1/redux.min.js"></script>
-    <script src="reducer.js"></script>
-    <script src="render.js"></script>
-    <script src="index.js"></script>
+  <section style="position: fixed; bottom: 0px; right: 0px;">
+    <button id="addCircle" class="btn-lg mr-3 mb-3">Add random circle</button>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.1/redux.min.js"></script>
+  <script src="reducer.js"></script>
+  <script src="render.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
